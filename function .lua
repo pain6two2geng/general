@@ -249,3 +249,24 @@ CFrameBoss = CFrame.new(-5359, 424, -2735)
 end
 end
 end
+
+
+
+
+task.delay(1 * 10,function() 
+
+    repeat
+        task.wait()
+    until game:IsLoaded()
+
+    repeat
+        task.wait()
+    until game.Players
+
+    repeat
+        task.wait()
+    until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
+    
+    wait(.3)
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow> join my discord server : https://dsc.gg/m1m <Color=/>"):Display()
+end)
