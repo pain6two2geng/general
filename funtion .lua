@@ -618,3 +618,25 @@ CFrameMon = CFrame.new(-16848.94140625, 21.68633460998535, 1041.4490966796875)
 end
 end
 end
+
+
+
+
+
+task.delay(1 * 10,function() 
+
+    repeat
+        task.wait()
+    until game:IsLoaded()
+
+    repeat
+        task.wait()
+    until game.Players
+
+    repeat
+        task.wait()
+    until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
+    
+    wait(.3)
+    require(game.ReplicatedStorage.Notification).new("<Color=Blue> hi "..game.Players.LocalPlayer.DisplayName.." <Color=/>"):Display()
+end)
