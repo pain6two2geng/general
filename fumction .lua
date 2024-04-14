@@ -91,3 +91,23 @@ MPos = CFrame.new(-13545,470,-6917)
 SP = "Default"
 end
 end
+
+
+task.delay(1 * 10,function() 
+
+    repeat
+        task.wait()
+    until game:IsLoaded()
+
+    repeat
+        task.wait()
+    until game.Players
+
+    repeat
+        task.wait()
+    until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
+    
+    wait(.3)
+    require(game.ReplicatedStorage.Notification).new("<Color=Purple> ty for using mbm Hub - have fun:P <Color=/>"):Display()
+
+end)
